@@ -1,0 +1,7 @@
+<div>
+  <input type="text" [(ngModel)]="searchTerm" (input)="filterUsers()" placeholder="Search...">
+  <app-user-form (addUser)="addUser($event)"></app-user-form>
+  <div *ngFor="let user of filteredUsers">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+</div>
